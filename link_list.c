@@ -1,6 +1,6 @@
 //C program on singly linked list
 #include<stdio.h>
-#include<stdlib.h>
+#include<malloc.h>
 struct node * find_end(int *);
 void add_node();
 void remove_node();
