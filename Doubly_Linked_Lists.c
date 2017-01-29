@@ -140,6 +140,24 @@ void delete_node()
                 break;
     }
 }
+void reverse()
+{
+    struct node *q=start,*r=NULL,*s,*temp;;
+    if(start==NULL)
+        printf("\nList is empty");
+    else
+    {
+        while(q!=NULL)
+        {
+            r=q->prev;
+            q->prev=q->next;
+            q->next=r;
+            q=q->prev;
+        }
+        start=r->prev;
+        printf("\nLinked list reversed\n");
+    }
+}
 void display()
 {
     struct node *temp=start;
@@ -171,6 +189,8 @@ int main()
         case 2: delete_node();
                 break;
         case 3: display();
+                break;
+        case 4: reverse();
                 break;
         case 0: return 0;
         default: printf("\nInvalid choice");
