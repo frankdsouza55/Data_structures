@@ -142,7 +142,7 @@ void delete_node()
 }
 void reverse()
 {
-    struct node *q=start,*r=NULL,*s,*temp;;
+    struct node *q=start,*r=NUL;
     if(start==NULL)
         printf("\nList is empty");
     else
